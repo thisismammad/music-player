@@ -14,6 +14,7 @@ html {
   padding: 0;
   user-select: none;
   -moz-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: transparent;
 }
 
 body {
