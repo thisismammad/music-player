@@ -1,0 +1,99 @@
+:root {
+  --bg-color: #333;
+  --color: white;
+  --time-color: rgba(255, 255, 255, 0.2);
+}
+
+html {
+  margin: 0;
+  height: 100%;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  background-color: var(--bg-color);
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  color: var(--color);
+}
+
+main {
+  max-width: 425px;
+  margin: 40px auto;
+  text-align: center;
+  padding: 20px;
+  overflow: hidden;
+  position: relative;
+}
+
+main > i {
+  position: absolute;
+  top: 0px;
+  left: 50%;
+  transform: translate(-50%);
+  font-size: 1.5em;
+  cursor: pointer;
+}
+#music-name {
+  margin-top: 20px;
+}
+
+#music-time {
+  margin: 20px 0;
+  width: 100%;
+  height: 2px;
+  appearance: none;
+  background-color: var(--time-color);
+  cursor: pointer;
+}
+#music-time::-webkit-slider-thumb {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: var(--color);
+  cursor: pointer;
+}
+
+#music-cover {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  margin-top: 10px;
+  border: 1px solid var(--color);
+  animation-name: animation;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-play-state: paused;
+}
+
+#btns {
+  /* width: 100%; */
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+#btns i {
+  font-size: 2em;
+  cursor: pointer;
+}
+
+@keyframes animation {
+  0% {
+    box-shadow: 0 0 0 blueviolet;
+    transform: rotate(0);
+  }
+  50% {
+    box-shadow: 0 0 20px blueviolet;
+  }
+  100% {
+    box-shadow: 0 0 0 blueviolet;
+    transform: rotate(360deg);
+  }
+}
