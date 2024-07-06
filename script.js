@@ -1,19 +1,29 @@
-window.addEventListener("load", () => {
+window.onload = function () {
+  const images = [
+    "images/IMG_20240319_180226_204_resize_34.jpg",
+    "images/hqdefault.jpg",
+    "images/Erfan-Tahmasbi-Del-Az-Man-Music-fa.com_-150x150.jpg",
+  ];
+    for (let index = 0; index < images.length; index++) {
+      var img = new Image();
+      img.src = images[index];
+      console.log(images[index])
+    }
   document.querySelector(".loading").style.display = "none";
   const musics = [
     {
       name: "Delom Band",
-      cover: "images/IMG_20240319_180226_204_resize_34.jpg",
+      cover: images[0],
       audio: new Audio("./music/audio.mp3"),
     },
     {
       name: "Ensaf Nist",
-      cover: "images/hqdefault.jpg",
+      cover: images[1],
       audio: new Audio("./music/Soheil Mehrzadegan - Ensaf Nist.mp3"),
     },
     {
       name: "Del Az Man",
-      cover: "images/Erfan-Tahmasbi-Del-Az-Man-Music-fa.com_-150x150.jpg",
+      cover: images[2],
       audio: new Audio("./music/Erfan Tahmasbi - To (320).mp3"),
     },
   ];
@@ -137,4 +147,4 @@ window.addEventListener("load", () => {
     root.style.setProperty("--color", "#333");
     root.style.setProperty("--time-color", "rgba(0, 0, 0, 0.2)");
   }
-});
+};
